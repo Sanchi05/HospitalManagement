@@ -1,0 +1,85 @@
+
+.side-navbar{
+    width: 350px;
+    height: 100%;
+    position: fixed;
+    margin-left: -350px;
+    background-color: #4F94CD;
+    transition: 0.5s;
+}
+.nav-link{
+    width: 350px;
+    height: auto;
+}
+.nav-link a {
+    text-decoration: none;
+}
+
+.btn{
+    background-color: White;
+    border: none; /* Remove borders */
+    padding: 10px 16px; /* Some padding */
+    font-size: 16px; /* Set a font size */
+    cursor: pointer;
+    transition: 0.5s;
+}
+.nav-link:active,
+.nav-link:focus,
+.nav-link:hover{
+    background-color: beige;
+    width: 350px;
+}
+.icon-link{
+    color: black;
+    cursor: pointer;
+}
+.side-active{
+    margin-left: 0px;
+}
+.btn-active{
+    margin-left: 300px;
+}
+
+.dropdownMenu{
+    display: none;
+    position: absolute;
+    background-color: #4F94CD;
+    min-width: 160px;
+    box-shadow: black;
+    z-index: 1;
+    transition: 0.4s;
+}
+.dropdownMenu a{
+    color: black;
+    padding: 15px;
+    text-decoration: none;
+    border: black;
+    font-size: medium;
+}
+.dropdownMenu a:hover{
+    background-color: beige;
+    color: black;
+}
+.showMenu{
+    display: block;
+    margin-left: 310px;
+    margin-top: -54px;
+}
+
+.hideMenu{
+    display: none;
+}
+
+.slide-table{
+    margin-left: 400px;
+}
+.appointments{
+    transition: 0.5s;
+}
+
+.prescription{
+    transition: 0.4s;
+}
+.prescription-slide{
+    margin-left: 400px ;
+}
