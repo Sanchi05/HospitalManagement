@@ -37,7 +37,6 @@
                 <li class="list-group-item">FOllow Up Date: ${pres.p_followup}</li>
                 <li class="list-group-item">Fees: ${pres.p_fees}</li>
 
-
             </ul>
         </div>
     </div>

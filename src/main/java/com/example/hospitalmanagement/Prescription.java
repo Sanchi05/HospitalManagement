@@ -10,16 +10,6 @@ public class Prescription {
     String p_meds ;
     String p_followup;
 
-    public int getP_fees() {
-        return p_fees;
-    }
-
-    public void setP_fees(int p_fees) {
-        this.p_fees = p_fees;
-    }
-
-    int p_fees;
-
     public int getP_id() {
         return p_id;
     }

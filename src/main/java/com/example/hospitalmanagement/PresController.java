@@ -24,13 +24,8 @@ public class PresController {
         ModelAndView modelAndView = new ModelAndView("pres_done");
         modelAndView.addObject("prescription",pres);
         return  modelAndView;
+
+
     }
-
-    @RequestMapping (value = "/searchPatient", method = RequestMethod.GET)
-    public ModelAndView searchPatient(){
-        return new ModelAndView("view_patient","search_patient",new Patient());
-    }
-
-
 
 }

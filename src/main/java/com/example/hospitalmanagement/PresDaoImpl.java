@@ -24,20 +24,18 @@ public class PresDaoImpl extends JdbcDaoSupport implements PresDao {
     @Override
     public void insertInto(Prescription pres) {
         String sql = "INSERT INTO prescription" +
-                "(p_id,p_name,p_symptoms,p_diagnosis,p_donts,p_dos,p_meds,p_followup,p_fees) " +
-                " Values (?,?,?,?,?,?,?,?,?)";
+                "(p_id,p_name,p_symptoms,p_diagnosis,p_donts,p_dos,p_meds,p_followup) " +
+                " Values (?,?,?,?,?,?,?,?)";
 
         getJdbcTemplate().update(sql,new Object[]{
             pres.getP_id(),pres.getP_name(),pres.getP_symptoms(),pres.getP_diagnosis(),
-                pres.getP_donts(),pres.getP_dos(),pres.getP_meds(),pres.getP_followup(),pres.getP_fees()
+                pres.getP_donts(),pres.getP_dos(),pres.getP_meds(),pres.getP_followup()
         });
     }
 
     @Override
     public Prescription displayFrom(int PId) {
-
-            return null;
-
+        return null;
     }
 
 
