@@ -15,7 +15,7 @@
     text-decoration: none;
 }
 
-#btn{
+.btn{
     background-color: White;
     border: none; /* Remove borders */
     padding: 10px 16px; /* Some padding */
@@ -32,6 +32,9 @@
 .icon-link{
     color: black;
     cursor: pointer;
+}
+.side-active{
+    margin-left: 0px;
 }
 .btn-active{
     margin-left: 300px;
@@ -77,16 +80,6 @@
 .prescription{
     transition: 0.4s;
 }
-
 .prescription-slide{
-    margin-left: 400px;
-    transition: 0.5s;
-}
-
-.dropdown-slide{
-    margin-left: 600px;
-}
-
-.sidebar-active{
-    margin-left: 0px;
+    margin-left: 400px ;
 }

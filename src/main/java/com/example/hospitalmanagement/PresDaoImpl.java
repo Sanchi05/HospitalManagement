@@ -14,8 +14,6 @@ public class PresDaoImpl extends JdbcDaoSupport implements PresDao {
     @Autowired
     DataSource dataSource;
 
-
-
     @PostConstruct
     public void initialize(){
         setDataSource(dataSource);
@@ -37,8 +35,6 @@ public class PresDaoImpl extends JdbcDaoSupport implements PresDao {
     public Prescription displayFrom(int PId) {
         return null;
     }
-
-
 
 
 }
