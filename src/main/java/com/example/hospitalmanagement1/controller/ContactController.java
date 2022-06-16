@@ -10,20 +10,24 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class ContactController {
-
     @Autowired
     ContactService contactservice;
 
     @RequestMapping(value = "/contact", method = RequestMethod.GET)
     public ModelAndView show() {
-        return new ModelAndView("contact", "cont", new Contact());
+        return new ModelAndView("contact1", "cont", new Contact());
     }
 
     @RequestMapping(value = "/contact", method = RequestMethod.POST)
     public ModelAndView processRequest(@ModelAttribute("cont") Contact cont) {
         contactservice.insertContact(cont);
         ModelAndView modelAndView = new ModelAndView("contact_done");
-        modelAndView.addObject("contact",cont);
+        modelAndView.addObject("cont",cont);
         return modelAndView;
     }
+
+
+
+
+
 }
