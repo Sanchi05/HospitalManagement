@@ -1,0 +1,57 @@
+body{
+    margin:0;
+    padding: 0;
+    background-image: url("https://images03.nicepage.com/c461c07a441a5d220e8feb1a/3b58565a58cd5889b8e0e5b6/8min.jpg");
+    background-size: cover;
+    background-position: center;
+    font-family: sans-serif;
+
+}
+
+.loginbox{
+    width: 320px;
+    height: 420px;
+    background: white;
+    color: #0000FF;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50% , -50%);
+    box-sizing: border-box;
+    padding: 70px 30px;
+}
+
+h1{
+    margin: 0;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 22px;
+}
+
+.loginbox p {
+    margin: 0;
+    padding: 5px;
+    font-weight: bold;
+}
+
+.loginbox input{
+    width:100%;
+    margin-bottom: 20px;
+}
+
+.loginbox input[type="submit"]
+{
+    border: none;
+    outline:none;
+    height:40px;
+    background:blue;
+    color:#fff;
+    font-size: 18px;
+    border-radius:20px;
+
+}
+
+.loginbox select{
+    padding: 5px;
+
+}
