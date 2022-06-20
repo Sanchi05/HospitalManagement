@@ -16,19 +16,20 @@ public class PatientDaoImpl extends JdbcDaoSupport implements PatientDao{
     @Autowired
     DataSource dataSource1;
     @PostConstruct
-    public void initialize(DataSource dataSource){
+    public void initialize1(){
         setDataSource(dataSource1);
     }
 
     @Override
     public Patient findPatientById(int patient_id) {
-        String sql = "SELECT * FROM patients where pt_id=101";
+        String sql = "SELECT * FROM patients where pt_id=?";
         return getJdbcTemplate().queryForObject(sql,new BeanPropertyRowMapper<>(Patient.class),new Object[]{
                 patient_id
         });
         //System.out.println(patient);
         //return null;
-        }
+    }
+
 
 
     }

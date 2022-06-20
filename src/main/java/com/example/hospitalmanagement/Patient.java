@@ -1,5 +1,7 @@
 package com.example.hospitalmanagement;
 
+import org.springframework.context.annotation.Bean;
+
 public class Patient {
 
     String pt_name;
