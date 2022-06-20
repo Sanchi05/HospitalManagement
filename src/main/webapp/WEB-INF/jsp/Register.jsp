@@ -41,7 +41,7 @@
         </div>
 
         <div class="login-click">
-            Already an user? <a href="${contextPath}/Login">Login Now</a>
+            Already an user? <a href="Login.jsp">Login Now</a>
         </div>
 
     </form:form>

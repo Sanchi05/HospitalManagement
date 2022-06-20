@@ -14,8 +14,6 @@ public class SpringController {
     @Autowired
     RegisterJdbcRepository registerJdbcRepository;
 
-
-
     @RequestMapping(value = "/UserRegister", method = RequestMethod.GET)
     public ModelAndView show_page() {
         System.out.println("Implemented");
@@ -33,7 +31,6 @@ public class SpringController {
     }
 
 
-
     @RequestMapping(value = "/UserLogin",method = RequestMethod.GET)
     public ModelAndView login_show(){
         return new ModelAndView("Login","loginuser",new Login());
@@ -46,8 +43,7 @@ public class SpringController {
         Login login = new Login();
         login.setUsername(username);
         login.setPassword(password);
-//        System.out.println(login.getUsername());
-//        System.out.println(login.getPassword());
+//
         int name = registerJdbcRepository.loginuser(login);
         if (name != 0) {
             mv.addObject("msg", "Welcome" + name + ",You have successfully logged in");
@@ -62,19 +58,34 @@ public class SpringController {
 
     }
 
+    @Autowired
+    AddPatientJdcbRepository addPatientJdcbRepository;
 
 
+    @RequestMapping(value = "/Addpatient", method=RequestMethod.GET)
+    public ModelAndView display(){
+        System.out.println("Working");
+        return new ModelAndView("AddPatient","addPatient",new AddPatient()); }
 
+    @RequestMapping(value="/Addpatient",method = RequestMethod.POST)
+    public ModelAndView add(@ModelAttribute("addPatient") AddPatient addpatient){
+        System.out.println(addpatient);
+        addPatientJdcbRepository.insert(addpatient);
+        addPatientJdcbRepository.findAll();
+        addPatientJdcbRepository.findByPatient_Id(addpatient.getPatient_id());
+        System.out.println(addpatient.getFirst_name());
 
-
-}
-
-    /*
-    @RequestMapping(value = "/new",method = RequestMethod.POST)
-    public ModelAndView insertData(@ModelAttribute("userdetails") Login login){
-        loginJdbcRepository.insert(login);
-        ModelAndView modelAndView = new ModelAndView("Userdetails");
-        modelAndView.addObject("login",login);
+        ModelAndView modelAndView=new ModelAndView("Patient");
+        modelAndView.addObject("addPatient",addpatient);
         return modelAndView;
-    }*/
+        }
+    }
+
+
+
+
+
+
+
+
 
