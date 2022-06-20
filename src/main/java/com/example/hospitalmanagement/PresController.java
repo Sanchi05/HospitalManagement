@@ -31,17 +31,17 @@ public class PresController {
 
     @RequestMapping(value = "/searchPatient", method = RequestMethod.GET)
     public ModelAndView searchPatient(){
-        return new ModelAndView("view_patient","search",new Patient());
+        return new ModelAndView("view_patient","searchPatient",new Patient());
     }
 
     @RequestMapping(value = "/searchPatient",method = RequestMethod.POST)
-    public ModelAndView viewPatient(@ModelAttribute("search") @RequestParam("pt_id") int id){
+    public ModelAndView viewPatient(@ModelAttribute("searchPatient") @RequestParam("pt_id") int id){
         System.out.println(id);
         Patient patient1 = patientService.findPatientById(id);
         System.out.println(patient1.getPt_gender());
         //System.out.println(patient1);
         ModelAndView model = new ModelAndView("view_patient");
-        model.addObject("search",patient1);
+        model.addObject("searchPatient",patient1);
         //System.out.println(patient1);
         return model;
     }

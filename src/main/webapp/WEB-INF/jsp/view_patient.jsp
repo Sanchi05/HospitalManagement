@@ -3,13 +3,15 @@
 <html>
 <head>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="view_patient.css">
 </head>
 <body>
 <%--@elvariable id="search" type=""--%>
 <div class="container p-5">
     <div class="container p-5">
         <div class="container p-5 justify-content-center">
-            <form:form method="post" action="/searchPatient" modelAttribute="search" class="w-100">
+            <%--@elvariable id="searchPatient" type=""--%>
+            <form:form method="post" action="/searchPatient" modelAttribute="searchPatient" class="w-100">
                 <div class="row">
                     <div class="col-12 w-100 col-sm-6">
                         <div class="text-center fs-4 p-2">
@@ -23,12 +25,12 @@
                 <div class="row">
                     <div class="col w-100">
                         <div class="text-center fs-4 p-2">
-                            <button value="Search" type="submit" class="btn btn-outline-dark btn-lg w-100">Search Patient By Id</button>
+                            <input value="Search Patient by Id" type="submit" class="btn btn-outline-dark btn-lg w-100" id="showById">
                         </div>
                     </div>
                     <div class="col w-100">
                         <div class="text-center fs-4 p-2">
-                            <button value="Search" type="submit" class="btn btn-outline-dark btn-lg w-100">Search Patient By Name</button>
+                            <input value="Search Patient by Name" type="submit" class="btn btn-outline-dark btn-lg w-100">
                         </div>
                     </div>
                 </div>
@@ -36,42 +38,39 @@
         </div>
     </div>
 </div>
-<div class="container-fluid">
-    <p>The search results:</p><br>
+
+<p></p>
+<div class="container-fluid viewResults" id="viewPts">
+    <p class="fs-4 p-3">The search results:</p><br>
     <div class="container-fluid">
-        <table class="table">
+        <table class="table mt-0 w-75">
         <thead>
         <tr>
             <th scope="col">Patient Id</th>
             <th scope="col">Patient Name</th>
-            <th scope="col">Patient </th>
-            <th scope="col">Handle</th>
+            <th scope="col">Mobile</th>
+            <th scope="col">Email</th>
+            <th scope="col">Doctor Assigned</th>
         </tr>
         </thead>
         <tbody>
         <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-        </tr>
-        <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-        </tr>
-        <tr>
-            <th scope="row">3</th>
-            <td colspan="2">Larry the Bird</td>
-            <td>@twitter</td>
+            <td>${searchPatient.pt_id}</td>
+            <td>${searchPatient.pt_name}</td>
+            <td>${searchPatient.pt_mobile}</td>
+            <td>${searchPatient.pt_email}</td>
+            <td>${searchPatient.pt_doctorasg}</td>
         </tr>
         </tbody>
     </table>
     </div>
 
 </div>
+<div id="hhh"></div>
 
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
+<script src="viewPatientTable.js"></script>
 </body>
 </html>
 
