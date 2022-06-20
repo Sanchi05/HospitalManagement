@@ -1,36 +1,28 @@
 package com.example.hospitalmanagement1.model;
 
-public class Doctor {
-    int Doctor_id;
+public class Receptionist {
+    int Employee_id;
     String Fullname;
     String Date_of_Birth;
     String Gender;
+    String Email;
+    String Phone_Number;
     String Address;
-    String Specialization;
     String Degree;
     String Institute;
     String Year_of_Passing;
-    String CGPA;
+    String Percentage;
     String Job_Description;
     String From;
     String To;
     String Organization;
 
-
-    public String getYear_of_Passing() {
-        return Year_of_Passing;
+    public int getEmployee_id() {
+        return Employee_id;
     }
 
-    public void setYear_of_Passing(String year_of_Passing) {
-        Year_of_Passing = year_of_Passing;
-    }
-
-    public int getDoctor_id() {
-        return Doctor_id;
-    }
-
-    public void setDoctor_id(int doctor_id) {
-        Doctor_id = doctor_id;
+    public void setEmployee_id(int employee_id) {
+        Employee_id = employee_id;
     }
 
     public String getFullname() {
@@ -57,20 +49,28 @@ public class Doctor {
         Gender = gender;
     }
 
+    public String getEmail() {
+        return Email;
+    }
+
+    public void setEmail(String email) {
+        Email = email;
+    }
+
+    public String getPhone_Number() {
+        return Phone_Number;
+    }
+
+    public void setPhone_Number(String phone_Number) {
+        Phone_Number = phone_Number;
+    }
+
     public String getAddress() {
         return Address;
     }
 
     public void setAddress(String address) {
         Address = address;
-    }
-
-    public String getSpecialization() {
-        return Specialization;
-    }
-
-    public void setSpecialization(String specialization) {
-        Specialization = specialization;
     }
 
     public String getDegree() {
@@ -89,20 +89,30 @@ public class Doctor {
         Institute = institute;
     }
 
-    public String getCGPA() {
-        return CGPA;
+    public String getYear_of_Passing() {
+        return Year_of_Passing;
     }
 
-    public void setCGPA(String CGPA) {
-        this.CGPA = CGPA;
+    public void setYear_of_Passing(String year_of_Passing) {
+        Year_of_Passing = year_of_Passing;
+    }
+
+    public String getPercentage() {
+        return Percentage;
+    }
+
+    public void setPercentage(String percentage) {
+        Percentage = percentage;
     }
 
     public String getJob_Description() {
         return Job_Description;
     }
+
     public void setJob_Description(String job_Description) {
         Job_Description = job_Description;
     }
+
     public String getFrom() {
         return From;
     }
@@ -127,3 +137,5 @@ public class Doctor {
         Organization = organization;
     }
 }
+
+

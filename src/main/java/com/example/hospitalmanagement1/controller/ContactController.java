@@ -15,7 +15,7 @@ public class ContactController {
 
     @RequestMapping(value = "/contact", method = RequestMethod.GET)
     public ModelAndView show() {
-        return new ModelAndView("contact1", "cont", new Contact());
+        return new ModelAndView("contact", "cont", new Contact());
     }
 
     @RequestMapping(value = "/contact", method = RequestMethod.POST)
