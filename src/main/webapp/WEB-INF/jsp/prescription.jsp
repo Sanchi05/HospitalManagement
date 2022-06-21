@@ -31,11 +31,11 @@
                 </a>
                 <div class="dropdownMenu w-50 flex-column" id="drop">
                     <a class="dropdown-item h2 p-4" href="#">Add Patient</a>
-                    <a class="dropdown-item h2 p-4" href="#">View Patient</a>
+                    <a class="dropdown-item h2 p-4" href="<%=request.getContextPath()%>/Search Patients">View Patient</a>
                 </div>
             </li>
             <li class="nav-link prescription" id="pres">
-                <a href="prescription.html" class="text-dark">
+                <a href="<%=request.getContextPath()%>/newPrescription" class="text-dark">
                     <p><span class="h3">Prescription</span></p>
                 </a>
             </li>
@@ -67,7 +67,7 @@
                 </div>
                 <label class="col-sm-2 col-form-label text-center fs-5">Patient Id:</label>
                 <div class="col-sm-3">
-                    <form:input path="p_id" class = "form-control fs-5" type="text" placeholder="Patient's Name" id="id"/>
+                    <form:input path="p_id" class = "form-control fs-5" type="text" placeholder="Patient's Id" id="id"/>
                 </div>
             </div>
             <div class="card">
@@ -121,7 +121,7 @@
         </form:form>
     </div>
 </div>
-<p>{message}</p>
+
 
 
 

@@ -10,6 +10,8 @@ public class Prescription {
     String p_meds ;
     String p_followup;
 
+    int p_fees;
+
     public int getP_id() {
         return p_id;
     }
@@ -72,5 +74,13 @@ public class Prescription {
 
     public void setP_followup(String p_followup) {
         this.p_followup = p_followup;
+    }
+
+    public int getP_fees() {
+        return p_fees;
+    }
+
+    public void setP_fees(int p_fees) {
+        this.p_fees = p_fees;
     }
 }

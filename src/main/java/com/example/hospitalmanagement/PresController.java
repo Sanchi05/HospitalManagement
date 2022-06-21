@@ -2,6 +2,7 @@ package com.example.hospitalmanagement;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -46,6 +47,10 @@ public class PresController {
         return model;
     }
 
+    @RequestMapping(value = "/inicio", method = RequestMethod.GET)
+    public String index(ModelMap model){
+        return "pres_done";
+    }
 
 
 
