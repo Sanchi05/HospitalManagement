@@ -23,6 +23,7 @@
     cursor: pointer;
     transition: 0.5s;
 }
+
 .nav-link:active,
 .nav-link:focus,
 .nav-link:hover{
