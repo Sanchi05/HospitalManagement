@@ -27,7 +27,7 @@
         <ul class="nav text-dark text-center" >
             <li class="nav-link">
                 <a href="#" class="text-dark" onclick="viewDropdown()">
-                    <p><span class="h3 ">Patient Information &ensp;<i class="fa-solid fa-angle-right dropbtn" onclick="viewDropdown()"></i></span></p>
+                    <p><span class="h3">Patient Information &ensp;<i class="fa-solid fa-angle-right dropbtn" onclick="viewDropdown()"></i></span></p>
                 </a>
                 <div class="dropdownMenu w-50 flex-column" id="drop">
                     <a class="dropdown-item h2 p-4" href="#">Add Patient</a>
