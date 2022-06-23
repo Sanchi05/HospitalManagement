@@ -24,7 +24,7 @@
     </div>
 </div>
 
-
+<%--Side Navbar--%>
 <div class="side-navbar active-nav justify-content-between flex-wrap flex-column" id="sidenavbar">
     <div class="container text-center mt-5">
         <h1>
@@ -45,10 +45,11 @@
                     <p><span class="h3 ">Doctors &ensp;<i class="fa-solid fa-angle-right dropbtn" onclick="viewDropdown()"></i></span></p>
                 </a>
                 <div class="dropdownMenu w-50 flex-column" id="drop">
-                    <a class="dropdown-item h2 p-4" href="doctoradd.html">Add Doctors</a>
+                    <a class="dropdown-item h2 p-4" href="${pageContext.request.contextPath}/getdoctor">Add Doctors</a>
                     <a class="dropdown-item h2 p-4" href="#">View Doctors</a>
                 </div>
             </li>
+
 
 
             <li class="nav-link Receptioninsts" id="receps">
@@ -56,7 +57,7 @@
                     <p><span class="h3 ">Receptionists &ensp;<i class="fa-solid fa-angle-right dropbtn"
                                                                 onclick="viewDropdown1()"></i></span></p></a>
                 <div class="dropdownMenu w-50 flex-column" id="drop1">
-                    <a class="dropdown-item h2 p-4" href="#">Add Receptionist</a>
+                    <a class="dropdown-item h2 p-4" href="${pageContext.request.contextPath}/getreceptionist">Add Receptionist</a>
                     <a class="dropdown-item h2 p-4" href="#">View Receptionists</a>
                 </div>
             </li>
@@ -90,6 +91,8 @@
         crossorigin="anonymous"></script>
 <script src="slider.js"></script>
 
+
+<%--Display Cards--%>
 
 <div id="main">
     <div class="row justify-content-center align-items-center">

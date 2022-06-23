@@ -126,4 +126,13 @@ public class Doctor {
     public void setOrganization(String organization) {
         Organization = organization;
     }
+
+    @Override
+    public String toString(){
+        return "Doctor [Doctor_id=" + Doctor_id + ", Fullname=" + Fullname + ", " +
+                "Date_of_Birth=" + Date_of_Birth + ", Gender=" + Gender + ",Address=" + Address +"" +
+                "Specialization= "+ Specialization + ", Degree= " + Degree + ",Institute= " + Institute +"" +
+                "Year_of_Passing= "+ Year_of_Passing+ "CGPA= " + CGPA +", Job_Description= " + Job_Description + "" +
+                ", From= " + From + ", To= " + To + ", Organization= " + Organization + "]";
+    }
 }

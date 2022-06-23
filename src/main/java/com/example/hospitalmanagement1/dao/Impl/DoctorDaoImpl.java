@@ -22,8 +22,8 @@ public class DoctorDaoImpl extends JdbcDaoSupport implements DoctorDao {
     public void insertDoctor(Doctor doctor) {
         String sql = "INSERT into doctors" +
                 "(Doctor_id, Fullname, Date_of_Birth, Gender, Specialization, " +
-                "Address, Degree, Institute_name, Year_of_Passing ,CGPA, " +
-                "Job_Description, `From` , `To`, Organization) Values(?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+                "Address, Degree, Institute, Year_of_Passing ,CGPA, " +
+                "Job_Description, `From` , `To`, `Organization`) Values(?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
         getJdbcTemplate().update(sql, new Object[]{
                 doctor.getDoctor_id(), doctor.getFullname(), doctor.getDate_of_Birth(), doctor.getGender(), doctor.getSpecialization(),
                 doctor.getAddress(), doctor.getDegree(), doctor.getInstitute(), doctor.getYear_of_Passing(), doctor.getCGPA(),
@@ -32,7 +32,7 @@ public class DoctorDaoImpl extends JdbcDaoSupport implements DoctorDao {
     }
 
     @Override
-    public List<Doctor> getAllDoctor(){
+    public List<Doctor> getdoctor(){
         String sql="SELECT * FROM doctors";
         List<Map<String, Object>> rows =getJdbcTemplate().queryForList(sql);
         List<Doctor> result = new ArrayList<>();

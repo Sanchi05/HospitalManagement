@@ -37,7 +37,7 @@ public class ReceptionistDaoImpl extends JdbcDaoSupport implements ReceptionistD
     }
 
     @Override
-    public List<Receptionist> getAllReceptionist(){
+    public List<Receptionist> getreceptionist(){
         String sql="SELECT * FROM receptionists";
         List<Map<String, Object>> rows =getJdbcTemplate().queryForList(sql);
         List<Receptionist> result = new ArrayList<>();

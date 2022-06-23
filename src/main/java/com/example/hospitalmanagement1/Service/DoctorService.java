@@ -8,5 +8,5 @@ public interface DoctorService {
 
     void insertDoctor(Doctor doctor);
 
-    List<Doctor> getAllDoctor();
+    List<Doctor> getdoctor();
 }

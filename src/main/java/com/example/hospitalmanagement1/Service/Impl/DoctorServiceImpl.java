@@ -21,7 +21,7 @@ public class DoctorServiceImpl implements DoctorService {
 
 
     @Override
-    public List<Doctor> getAllDoctor(){
-                        return doctorDao.getAllDoctor();
+    public List<Doctor> getdoctor(){
+                        return doctorDao.getdoctor();
     }
 }

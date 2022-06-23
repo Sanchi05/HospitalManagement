@@ -22,7 +22,7 @@ public class ReceptionistServiceImpl implements ReceptionistService {
 
 
     @Override
-    public List<Receptionist> getAllReceptionist(){
-        return receptionistDao.getAllReceptionist();
+    public List<Receptionist> getreceptionist(){
+        return receptionistDao.getreceptionist();
     }
 }

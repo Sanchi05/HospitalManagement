@@ -9,6 +9,6 @@ public interface DoctorDao {
     void insertDoctor(Doctor doctor);
 
 
-    List<Doctor> getAllDoctor();
+    List<Doctor> getdoctor();
 
 }

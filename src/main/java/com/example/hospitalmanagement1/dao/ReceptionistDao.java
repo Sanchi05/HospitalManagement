@@ -9,6 +9,6 @@ public interface ReceptionistDao {
     void insertReceptionist(Receptionist receptionist);
 
 
-    List<Receptionist> getAllReceptionist();
+    List<Receptionist> getreceptionist();
 
 }

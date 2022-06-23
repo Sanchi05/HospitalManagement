@@ -136,6 +136,16 @@ public class Receptionist {
     public void setOrganization(String organization) {
         Organization = organization;
     }
+
+
+    @Override
+    public String toString(){
+        return "Receptionist [Employee_id= " + Employee_id + ", Fullname= " + Fullname + ", " +
+                "Date_of_Birth= " + Date_of_Birth + ", Gender= " + Gender + ",Email=" + Email +"" +
+                "Phone_Number= "+ Phone_Number + ", Address= " + Address + ",Degree= " + Degree +"" +
+                "Institute= "+ Institute +", Year_of_Passing= "+ Year_of_Passing+ "Percentage= " + Percentage +"" +
+                ", Job_Description= " + Job_Description + ", From= " + From + ", To= " + To + ", Organization= " + Organization + "]";
+    }
 }
 
 

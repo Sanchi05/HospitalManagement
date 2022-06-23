@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
+import java.util.List;
+
 @Controller
 public class DoctorController {
     @Autowired
@@ -37,4 +39,13 @@ public class DoctorController {
 //        model.addObject("doctors", doctors);
 //        return model;
 //    }
+
+    //Show all doctors saved in db
+    @RequestMapping("/getdoctor")
+    public ModelAndView getDoctor(){
+        List<Doctor> doctor = doctorService.getdoctor();
+        ModelAndView model = new ModelAndView("getdoctor");
+        model.addObject("doctor", doctor);
+        return model;
+    }
 }
