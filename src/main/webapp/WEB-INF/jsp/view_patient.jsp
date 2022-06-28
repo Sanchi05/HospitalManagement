@@ -55,9 +55,9 @@
         </thead>
         <tbody>
         <tr>
-            <td>${searchPatient.pt_id}</td>
-            <td>${searchPatient.pt_name}</td>
-            <td>${searchPatient.pt_mobile}</td>
+            <td>${searchPatient.patient_id}</td>
+            <td>${searchPatient.first_name}</td>
+            <td>${searchPatient.last_name}</td>
             <td>${searchPatient.pt_email}</td>
             <td>${searchPatient.pt_doctorasg}</td>
         </tr>
