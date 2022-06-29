@@ -19,9 +19,11 @@
         ResultSet rs = st.executeQuery("select * from receptionists;");
 %>
 
-
+<div class="container">
+    <h2 style="text-align:center">View All Receptionists</h2>
+</div>
 <table border=1 align=center style="text-align:center">
-    <h2 class="text-center">View All Receptionists</h2>
+    
     <thead>
     <tr>
         <th>Employee ID</th>

@@ -39,7 +39,6 @@
     </div>
 </section>
 
-<a href="${pageContext.request.contextPath}/getreceptionist">View All Receptionists</a>
 
 <section class="form-section">
     <div class="container">
@@ -133,6 +132,11 @@
                     </button>
                 </div>
                 </form:form>
+            </div>
+
+            <div class="col-10">
+                <a href="${pageContext.request.contextPath}/getreceptionist">
+                    <button type="submit" class="btn btn-primary w-100 mt-3 mb-3">Show Receptionists</button></a>
             </div>
 </body>
 </html>

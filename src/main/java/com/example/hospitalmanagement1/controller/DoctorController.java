@@ -1,5 +1,4 @@
 package com.example.hospitalmanagement1.controller;
-
 import com.example.hospitalmanagement1.Service.DoctorService;
 import com.example.hospitalmanagement1.model.Doctor;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,7 +7,6 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
-
 import java.util.List;
 
 @Controller
@@ -28,7 +26,7 @@ public class DoctorController {
     public ModelAndView processRequest(@ModelAttribute("doctor") Doctor doctor){
         doctorService.insertDoctor(doctor);
 //        List<Doctor> doctors = doctorService.getAllDoctor();
-        ModelAndView modelAndView = new ModelAndView("doctor_added");
+        ModelAndView modelAndView = new ModelAndView("getdoctor");
         modelAndView.addObject("doctor",doctor);
         return  modelAndView;}
 

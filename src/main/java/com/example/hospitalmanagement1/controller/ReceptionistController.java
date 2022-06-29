@@ -28,7 +28,7 @@ public class ReceptionistController {
     public ModelAndView processRequest(@ModelAttribute("receptionist") Receptionist receptionist) {
         receptionistService.insertReceptionist(receptionist);
         System.out.println(receptionist);
-        ModelAndView modelAndView = new ModelAndView("receptionist_added");
+        ModelAndView modelAndView = new ModelAndView("getreceptionist");
         modelAndView.addObject("receptionist", receptionist);
         return modelAndView;
     }

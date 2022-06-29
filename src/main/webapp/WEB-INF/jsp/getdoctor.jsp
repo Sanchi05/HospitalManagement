@@ -20,7 +20,7 @@
 %>
 
 <div class="container">
-    <h2 class="text-center">View All Doctors</h2>
+    <h2 style="text-align:center">View All Doctors</h2>
 </div>
 <table border=1 align=center style="text-align:center">
     <thead>

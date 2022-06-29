@@ -38,7 +38,9 @@
     </div>
 </section>
 
-<a href="${pageContext.request.contextPath}/getdoctor">Show Doctors</a>
+
+
+
 
 <section class="form-section">
     <div class="container">
@@ -119,11 +121,15 @@
                                 placeholder="Organization *"/>
                 </div>
                 <div class="col-md-10 text-center">
-                    <button type="submit" class="btn btn-primary w-100 mt-3 mb-3">Submit <i
-                            class="fas fa-paper-plane"></i>
+                    <button type="submit" class="btn btn-primary w-100 mt-3 mb-3">Submit <i class="fas fa-paper-plane"></i>
                     </button>
                 </div>
                 </form:form>
             </div>
+
+            <div class="col-10">
+                <a href="${pageContext.request.contextPath}/getdoctor"><button type="submit" class="btn btn-primary w-100 mt-3 mb-3">Show Doctors
+                </button></a>
+                </div>
 </body>
 </html>
